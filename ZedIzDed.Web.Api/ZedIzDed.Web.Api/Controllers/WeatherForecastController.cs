@@ -8,7 +8,7 @@ namespace ZedIzDed.Web.Api.Controllers
     {
         private static readonly string[] Summaries = new[]
         {
-            "Absolute Zero", 
+            "Absolute Zero !",
             "Freezing", 
             "Bracing", 
             "Chilly", 
