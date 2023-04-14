@@ -18,14 +18,14 @@ env:
   API_IMPORT_VERSION: v1
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
-  WORKING_DIRECTORY: 'zedizded'
+  WORKING_DIRECTORY: ''
 jobs:
   build:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Check Working Directory
-      run: echo env.WORKING_DIRECTORY is $(env.WORKING_DIRECTORY)
+    - name: Check Working Directory (pt 2)
+      run: echo env.WORKING_DIRECTORY is ${{ env.WORKING_DIRECTORY }}
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
