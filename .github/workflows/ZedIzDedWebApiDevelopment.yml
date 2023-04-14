@@ -24,6 +24,8 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Check Working Directory
+      run: echo env.WORKING_DIRECTORY is $(env.WORKING_DIRECTORY)
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
@@ -35,7 +37,7 @@ jobs:
     - name: Restore
       run: dotnet restore ${{ env.WORKING_DIRECTORY }}
     - name: Build
-      run: echo env.WORKING_DIRECTORY is $(env.WORKING_DIRECTORY)
+      run: dotnet build ${{ env.WORKING_DIRECTORY }} --configuration ${{ env.CONFIGURATION }} --no-restore
     - name: Test
       run: dotnet test ${{ env.WORKING_DIRECTORY }} --no-build
     - name: Publish
