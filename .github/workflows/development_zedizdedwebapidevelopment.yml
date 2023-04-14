@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - ZedIzDedWebApiDevelop
 on:
   push:
     branches:
-      - Development
+      - xxxDevelopment
   workflow_dispatch:
 
 jobs:
