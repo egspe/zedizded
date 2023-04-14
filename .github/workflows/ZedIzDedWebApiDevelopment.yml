@@ -24,8 +24,10 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Check Working Directory (pt 2)
+    - name: Check Working Directory (pt 3)
       run: echo env.WORKING_DIRECTORY is ${{ env.WORKING_DIRECTORY }}
+    - name: output dir
+      run: dir
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
